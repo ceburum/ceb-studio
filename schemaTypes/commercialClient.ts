@@ -25,6 +25,14 @@ export const commercialClient = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: 'cover',
+      title: 'Cover photo (optional)',
+      type: 'image',
+      description:
+        'If you add one, it shows on this client\u2019s tile instead of the logo. Leave empty to keep the logo.',
+      options: {hotspot: true},
+    }),
+    defineField({
       name: 'images',
       title: 'Photos',
       type: 'array',
