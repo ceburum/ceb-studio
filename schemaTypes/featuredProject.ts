@@ -46,6 +46,14 @@ export const featuredProject = defineType({
       ],
     }),
     defineField({
+      name: 'link',
+      title: 'Facebook or YouTube link (optional)',
+      type: 'url',
+      description:
+        'Paste the link to the post or video. A button shows under the project. The post must be set to Public.',
+      validation: (rule) => rule.uri({scheme: ['http', 'https']}),
+    }),
+    defineField({
       name: 'order',
       title: 'Order on page',
       type: 'number',
